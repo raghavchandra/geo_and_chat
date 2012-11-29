@@ -3,20 +3,19 @@ function getMyLocation() {
     navigator.geolocation.getCurrentPosition(
       // successful callback
       function(position) {
-	    var lat = position.coords.latitude
-	    var lon = position.coords.longitude
+	    var lat = position.coords.latitude.toFixed(3)
+	    var lon = position.coords.longitude.toFixed(3)
+		var locDisplayText = "Latitude: " + lat + " ,  Longitude: " + lon;
         $.ajax({
           url: "/findme/myLocation",
           type: "POST",
           data: {latitude: lat, longitude: lon},
           success: function() {
-			  var myLocation = "latitude: " + lat + " ,  longitude: " + lon;
-			  document.getElementById("my_location_display_text").value = myLocation;
+			  document.getElementById("my_location_display_text").value = locDisplayText;
               },
           error:   function() {
                 alert('Web Server Unavailable.');
-				var myLocation = "latitude: " + lat + " ,  longitude: " + lon;
-			    document.getElementById("my_location_display_text").value = myLocation;
+			    document.getElementById("my_location_display_text").value = locDisplayText;
               }
         })
       },
