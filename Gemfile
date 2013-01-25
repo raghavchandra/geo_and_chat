@@ -39,3 +39,12 @@ gem 'pg'
 
 # PostGIS ActiveRecord adapter
 gem 'activerecord-postgis-adapter'
+
+# Twitter Bootstrap
+gem "bootstrap-sass", ">= 2.1.0.0"
+
+# DSL for simplifying forms
+gem "simple_form"
+
+# User Authentication RACK solution
+gem "devise", "~> 2.2.2"

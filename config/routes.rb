@@ -1,12 +1,15 @@
 CheckinApp::Application.routes.draw do
+  
+  # Devise routes for user authentication
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
-  get "findme/index"
-  post "findme/myLocation"
+  # post "geo/myLocation"
 
   # You can have the root of your site routed with "root"
-  root :to => 'findme#index'
+  root :to => 'home#index'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

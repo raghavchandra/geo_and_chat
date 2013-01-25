@@ -7,7 +7,7 @@ function getMyLocation() {
 	    var lon = position.coords.longitude.toFixed(3)
 		var locDisplayText = "Latitude: " + lat + " ,  Longitude: " + lon;
         $.ajax({
-          url: "/findme/myLocation",
+          url: "/geo/myLocation",
           type: "POST",
           data: {latitude: lat, longitude: lon},
           success: function() {
