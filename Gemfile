@@ -41,7 +41,7 @@ gem 'pg'
 gem 'activerecord-postgis-adapter'
 
 # Twitter Bootstrap
-gem "bootstrap-sass", ">= 2.1.0.0"
+gem 'bootstrap-sass', '~> 2.2.2.0'
 
 # DSL for simplifying forms
 gem "simple_form"
